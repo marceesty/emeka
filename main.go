@@ -1,9 +1,38 @@
 package main
 
+import (
+	"fmt"
+	"net/http"
+)
 
-func main() {
+
+func home(w http.ResponseWriter, r *http.Request){
+	fmt.Fprint(w, "<h1>Welcome to my home page built with Golang</h1> <a href=/contact>Go to contact</a>")
 	
 }
+
+func contact(w http.ResponseWriter, r *http.Request){
+	fmt.Fprint(w, "<h1>This is the contact page</h1>  <a href=/>Go home</a>")
+	
+}
+
+func main() {
+	fmt.Println("starting our server...")
+	fmt.Println("Application running on port 8080")
+	
+	http.HandleFunc("/", home)
+	http.HandleFunc("/contact", contact)
+
+	http.ListenAndServe(":8080", nil)
+}
+
+
+
+
+
+
+
+
 
 
 // -check assignment
