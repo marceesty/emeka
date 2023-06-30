@@ -21,8 +21,6 @@ func additionAndSubtraction(num1, num2 int)(int, int){
 	return answer, answer2
 }
 
-
-
 func main12() {
 	anything := addition(23, 45)
 	fmt.Println(anything)

@@ -10,8 +10,8 @@ func main5()  {
 	books["1"] = "learning golang"
 	books["2"] = "learning Python"
 
-	fmt.Printf("the type of age declared is %T", books)
-	fmt.Printf("the type of age declared is %v", books)
+	// fmt.Printf("the type of age declared is %T", books)
+	// fmt.Printf("the type of age declared is %v", books)
 
 	// numbers := []int{2, 4, 6, 7, 9, 8, 1,10}
 	// name := "nneka"
@@ -22,8 +22,8 @@ func main5()  {
 	// cars["honda"] = "civic"
 	// cars["toyota"] = "venza"
 
-	for manufacturer, car := range cars{
-		fmt.Println(manufacturer,car)
+	for _, car := range cars{
+		fmt.Println(car)
 	}
 
 }
